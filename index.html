@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samani Villa Pecatu - Hunian Mewah Eksklusif di Bali</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .logo-font { font-family: 'Playfair Display', serif; }
+        
+        /* Hero Background dengan Gambar dari File Asli */
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://niagaproperty.com/wp-content/uploads/2025/06/1.-Samani-Villa-Pecatu-Modern-Tropis-Uluwatu-Kuta-Selatan-Badung-Bali-Unit-Maheswara.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .text-gold { color: #C5A059; }
+        .bg-gold { background-color: #C5A059; }
+        
+        /* Modal Style untuk Pop-up Download */
+        #downloadModal { display: none; }
+        #downloadModal.active { display: flex; }
+
+        .form-input {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e2e8f0;
+            outline: none;
+            transition: all 0.3s;
+        }
+        .form-input:focus { border-color: #C5A059; ring: 2px; ring-color: #C5A059; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <header class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold logo-font tracking-wide">
+                <span class="text-gray-800">SAMANI</span><span class="text-gold">VILLA</span>
+            </div>
+            
+            <div class="hidden md:flex items-center space-x-3">
+                <a href="#deskripsi" class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gold transition">About</a>
+                <a href="#gallery" class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gold transition">Gallery</a>
+                <a href="#keunggulan" class="px-3 py-2 text-sm font-semibold text-gray-700 hover:text-gold transition">Why Choose Us</a>
+                <a href="#cta" class="bg-gold text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-opacity-90 transition shadow-lg">
+                    Contact Us
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-bg h-screen flex items-center justify-center text-center text-white">
+        <div class="max-w-4xl px-6">
+            <p class="text-gold uppercase tracking-[0.3em] font-semibold mb-4">Kuta - Badung - Bali</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">Vila Eksklusif dengan Nilai Investasi Tinggi</h1>
+            <p class="text-lg md:text-xl mb-10 text-gray-200 font-light">
+                Hadir dengan konsep Modern Tropis di kawasan Uluwatu. Hunian asri yang dirancang khusus bagi Anda yang mendambakan ketenangan dan kemewahan di Pulau Dewata
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <button onclick="toggleModal()" class="bg-white text-gray-900 px-8 py-3 rounded-full font-semibold hover:bg-gold hover:text-white transition shadow-xl">
+                    Download E-Brochure
+                </button>
+                <a href="#cta" class="bg-gold text-white px-8 py-3 rounded-full font-semibold hover:scale-105 transition">
+                    Cek Harga Promo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="deskripsi" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full md:w-1/2 mb-12 md:mb-0 md:pr-12">
+                    <h2 class="text-gold text-sm uppercase tracking-widest mb-2 font-bold">Tentang Properti</h2>
+                    <h2 class="text-4xl font-bold mb-8 leading-tight">Hadir Lebih Eksklusif, Modern, dan Luxury</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6">
+                        SAMANI VILLA PECATU bukan sekadar hunian, melainkan aset investasi jangka panjang di lokasi paling premium di Bali. Terletak hanya 30 meter dari jalan utama, memudahkan mobilitas Anda namun tetap menjaga privasi.
+                    </p>
+					<p class="text-gray-600 leading-relaxed mb-8">
+                        Didukung oleh lingkungan yang tenang dan asri, setiap unit dirancang untuk memberikan kebahagiaan maksimal bagi keluarga Anda serta potensi <i>rental yield</i> yang tinggi.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4 border-t border-gray-200 pt-8">
+                        <div>
+                            <p class="font-bold text-xl text-gray-800">📍 Lokasi Emas</p>
+                            <p class="text-sm text-gray-500">Uluwatu, Kuta Selatan</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-xl text-gray-800">💎 Investasi</p>
+                            <p class="text-sm text-gray-500">High Rental Yield</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="https://niagaproperty.com/wp-content/uploads/2025/06/16.-.-Samani-Villa-Pecatu-Modern-Tropis-Uluwatu-Kuta-Selatan-Badung-Bali-Unit-Swastika.jpg" alt="Villa Design" class="rounded-2xl shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-16">Gallery Unit Villa</h2>
+			<p class="text-bold-500 mb-16 max-w-4xl mx-auto">Tersedia berbagai tipe pilihan unit: Swastika, Maheswara, Gagar Mayang, dan Juwita Ningrat.</p>
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-6 mb-12">
+                <div class="group overflow-hidden rounded-xl shadow-lg relative">
+                    <img src="https://niagaproperty.com/wp-content/uploads/2025/06/1.-Samani-Villa-Pecatu-Modern-Tropis-Uluwatu-Kuta-Selatan-Badung-Bali-Unit-Swastika.png" class="group-hover:scale-110 transition duration-500">
+					<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black text-white text-left">
+                        <p class="text-sm font-light">Tipe Unit</p>
+                        <p class="font-bold">Swastika</p>
+                    </div>
+                </div>
+                <div class="group overflow-hidden rounded-xl shadow-lg relative">
+                    <img src="https://niagaproperty.com/wp-content/uploads/2025/06/1.-Samani-Villa-Pecatu-Modern-Tropis-Uluwatu-Kuta-Selatan-Badung-Bali-Unit-Maheswara.webp" class="group-hover:scale-110 transition duration-500">
+					<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black text-white text-left">
+                        <p class="text-sm font-light">Tipe Unit</p>
+                        <p class="font-bold">Maheswara</p>
+                    </div>
+                </div>
+                <div class="group overflow-hidden rounded-xl shadow-lg relative">
+                    <img src="https://niagaproperty.com/wp-content/uploads/2025/06/1.-Samani-Villa-Pecatu-Modern-Tropis-Uluwatu-Kuta-Selatan-Badung-Bali-Unit-Gagar-Mayang.png" class="group-hover:scale-110 transition duration-500">
+					<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black text-white text-left">
+                        <p class="text-sm font-light">Tipe Unit</p>
+                        <p class="font-bold">Gagar Mayang</p>
+                    </div>
+                </div>
+				<div class="group overflow-hidden rounded-xl shadow-lg relative">
+                    <img src="https://niagaproperty.com/wp-content/uploads/2025/06/1.-Samani-Villa-Pecatu-Modern-Tropis-Uluwatu-Kuta-Selatan-Badung-Bali-Unit-Juwita-Ningrat.png" class="group-hover:scale-110 transition duration-500">
+					<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black text-white text-left">
+                        <p class="text-sm font-light">Tipe Unit</p>
+                        <p class="font-bold">Juwita Ningrat</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-2xl">
+                <h3 class="text-xl font-bold mb-4">Site Plan Villa</h3>
+                <img src="https://niagaproperty.com/wp-content/uploads/2025/06/9.-Site-Plan-Samani-Villa-Pecatu-Modern-Tropis-Uluwatu-Kuta-Selatan-Badung-Bali-Unit-Juwita-Ningrat.png" class="mx-auto rounded-lg shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <section id="keunggulan" class="py-24 bg-slate-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-16 font-serif">Mengapa Harus Vila Samani Pecatu?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="p-6">
+                    <div class="text-4xl mb-4">📍</div>
+                    <h3 class="text-xl font-bold mb-2">Lokasi Strategis</h3>
+                    <p class="text-gray-400 text-sm">Hanya menit menuju pantai-pantai terbaik di Bali.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl mb-4">💰</div>
+                    <h3 class="text-xl font-bold mb-2">ROI Tinggi</h3>
+                    <p class="text-gray-400 text-sm">Potensi capital gain dan sewa harian yang tinggi.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl mb-4">🏗️</div>
+                    <h3 class="text-xl font-bold mb-2">Kualitas Premium</h3>
+                    <p class="text-gray-400 text-sm">Material pilihan standar internasional.</p>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold mb-2">Keamanan 24/7</h3>
+                    <p class="text-gray-400 text-sm">Sistem keamanan satu pintu dan pengawasan CCTV.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto bg-gray-50 p-12 rounded-3xl shadow-2xl border border-gray-100">
+                <h2 class="text-3xl font-bold mb-6">Dapatkan Promo & E-Brochure</h2>
+                <p class="text-gray-600 mb-8">Lengkapi data di bawah ini untuk mengunduh brosur lengkap.</p>
+                
+                <form id="leadForm" class="text-left space-y-4 max-w-md mx-auto">
+                    <input type="text" name="nama" placeholder="Nama Lengkap" class="form-input" required>
+                    <input type="tel" name="whatsapp" placeholder="No. WhatsApp (Contoh: 0859...)" class="form-input" required>
+                    <input type="email" name="email" placeholder="Alamat Email" class="form-input" required>
+                    
+                    <button type="submit" id="submitBtn" class="w-full bg-gold text-white font-bold py-4 rounded-xl hover:bg-opacity-90 transition shadow-lg">
+                        Kirim & Download Brosur
+                    </button>
+                    <p id="statusMsg" class="hidden text-center font-bold text-green-600 mt-4">Berhasil! Mengalihkan ke unduhan...</p>
+                </form>
+
+                <div class="mt-10 pt-8 border-t border-gray-200">
+                    <p class="text-sm text-gray-500 mb-4">Atau hubungi kami langsung di:</p>
+                    <a href="https://wa.me/6285971103136?text=Halo,%20saya%20tertarik%20dengan%20Samani%20Villa%20Pecatu.%20Bisa%20minta%20info%20lebih%20lanjut" target="_blank" class="inline-flex items-center text-green-600 font-bold text-xl">
+                        WhatsApp: 0859-7110-3136
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="downloadModal" class="fixed inset-0 z-[60] bg-black/60 items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-md w-full p-8 relative">
+            <button onclick="toggleModal()" class="absolute top-4 right-4 text-gray-400">✕</button>
+            <h3 class="text-2xl font-bold mb-4 logo-font">E-Brochure Eksklusif</h3>
+            <p class="text-gray-500 text-sm mb-6">Isi data singkat untuk mendapatkan akses brosur.</p>
+            <form id="modalForm" class="space-y-4">
+                <input type="text" name="nama" placeholder="Nama Lengkap" class="form-input" required>
+                <input type="tel" name="whatsapp" placeholder="WhatsApp" class="form-input" required>
+                <input type="email" name="email" placeholder="Email" class="form-input" required>
+                <button type="submit" class="w-full bg-gold text-white font-bold py-3 rounded-xl">Download Sekarang</button>
+            </form>
+        </div>
+    </div>
+
+    <footer class="bg-slate-950 text-gray-500 py-12 text-center">
+        <div class="text-xl font-bold logo-font mb-2"><span class="text-white">SAMANI</span><span class="text-gold">VILLA</span></div>
+        <p class="text-xs">&copy; 2025 Samani Villa Pecatu by NIAGA PROPERTY. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // GANTI URL DI BAWAH INI DENGAN URL WEB APP GOOGLE SCRIPT ANDA
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxUb0ypDn3VyJdBIGY0PO4FZR5rExIg5Z-GMuU5cxp-B1eKJxsK5XGq9SOeT0g5lcA/exec'; 
+
+        function handleForm(formId) {
+            const form = document.getElementById(formId);
+            form.addEventListener('submit', e => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                btn.disabled = true;
+                btn.innerHTML = 'Memproses...';
+
+                fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => {
+                    alert('Data berhasil terkirim! Brosur akan segera diunduh.');
+                    // Link Brosur PDF
+                    window.location.href = "https://drive.google.com/file/d/1xV-c-LnMyGeUuiHxVK4cuvlUDp0HqeW4/view?usp=sharing"; 
+                })
+                .catch(error => {
+                    alert('Terjadi kesalahan, silakan coba lagi.');
+                    btn.disabled = false;
+                    btn.innerHTML = 'Kirim & Download';
+                });
+            });
+        }
+
+        handleForm('leadForm');
+        handleForm('modalForm');
+
+        function toggleModal() {
+            document.getElementById('downloadModal').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
